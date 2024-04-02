@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6354D8B0-6D7E-4319-98D3-F677CCF61FA7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ITNepal.SMSIntegration</RootNamespace>
+    <AssemblyName>ITNepal.SMSIntegration</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ITNepal.SMSIntegration.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=5.1.2.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.5.1.2\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="NepaliDateConverter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NepaliDateConverter\NepaliDateConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="SAPBusinessOneSDK, Version=1.0.0.1, Culture=neutral, PublicKeyToken=c7c3cb60e45d119f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files\SAP\SAP Business One\AddOns\ITNepal\NOCPriceSetUp(10.0.20)\X64Client\SAPBusinessOneSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AR Invoice.b1f.cs">
+      <DependentUpon>AR Invoice.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Incoming Payment.b1f.cs">
+      <DependentUpon>Incoming Payment.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Outgoing Payments.b1f.cs">
+      <DependentUpon>Outgoing Payments.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Print Preferences.b1f.cs">
+      <DependentUpon>Print Preferences.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SMS Details Setup.b1f.cs">
+      <DependentUpon>SMS Details Setup.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalMethods_Variables.cs" />
+    <Compile Include="Helpers\GlobalMethods_Variables.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helpers\AddonInfoInfo.cs" />
+    <Compile Include="Helpers\ApplicationHandlers.cs" />
+    <Compile Include="Helpers\B1FormBase.cs" />
+    <Compile Include="Helpers\B1SystemFormBase.cs" />
+    <Compile Include="Helpers\GlobalVariables.cs" />
+    <Compile Include="Helpers\Menu.cs" />
+    <Compile Include="Helpers\SAPColumn.cs" />
+    <Compile Include="Log\Logger.cs" />
+    <Compile Include="Log\Matrix.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Forms\AR Invoice.b1f">
+      <FormCategory>SystemForm</FormCategory>
+    </None>
+    <None Include="Forms\AR Invoice.b1f__orig_srf">
+      <DependentUpon>AR Invoice.b1f</DependentUpon>
+    </None>
+    <None Include="Forms\Incoming Payment.b1f">
+      <FormCategory>SystemForm</FormCategory>
+    </None>
+    <None Include="Forms\Incoming Payment.b1f__orig_srf">
+      <DependentUpon>Incoming Payment.b1f</DependentUpon>
+    </None>
+    <None Include="Forms\Outgoing Payments.b1f">
+      <FormCategory>SystemForm</FormCategory>
+    </None>
+    <None Include="Forms\Outgoing Payments.b1f__orig_srf">
+      <DependentUpon>Outgoing Payments.b1f</DependentUpon>
+    </None>
+    <None Include="Forms\Print Preferences.b1f">
+      <FormCategory>SystemForm</FormCategory>
+    </None>
+    <None Include="Forms\Print Preferences.b1f__orig_srf">
+      <DependentUpon>Print Preferences.b1f</DependentUpon>
+    </None>
+    <None Include="Forms\SMS Details Setup.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="NLog.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\imgLogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Log\Query.txt" />
+    <Content Include="Query.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ITNepal.MainLibrary\ITNepal.MainLibrary.csproj">
+      <Project>{3DC8B10B-D57E-46EA-8E09-C94C6EE89169}</Project>
+      <Name>ITNepal.MainLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SMS\SMS.csproj">
+      <Project>{C1FAC163-88AE-470C-A23B-45FF8126A294}</Project>
+      <Name>SMS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
